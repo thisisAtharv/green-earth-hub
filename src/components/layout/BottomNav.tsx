@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { icon: Home, label: 'Home', path: '/' },
+  { icon: Home, label: 'Home', path: '/dashboard' },
   { icon: Leaf, label: 'Track', path: '/track' },
   { icon: BookOpen, label: 'Learn', path: '/learn' },
   { icon: Trophy, label: 'Leaders', path: '/leaderboard' },
