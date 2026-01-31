@@ -1,13 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { AppLayout } from '@/components/layout/AppLayout';
+import { HeroCard } from '@/components/home/HeroCard';
+import { LevelPath } from '@/components/home/LevelPath';
+import { QuickStats } from '@/components/home/QuickStats';
+import { TodayActions } from '@/components/home/TodayActions';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <AppLayout>
+      <div className="p-4 space-y-4">
+        <HeroCard />
+        <LevelPath />
+        <QuickStats />
+        <TodayActions />
       </div>
-    </div>
+    </AppLayout>
   );
 };
 
