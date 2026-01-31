@@ -4,6 +4,7 @@ import { QuizCard } from '@/components/learn/QuizCard';
 import { TipsCarousel } from '@/components/learn/TipsCarousel';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { BookOpen, Lightbulb, FileText, Video, Image, Play, ArrowLeft, ExternalLink, X, Clock, Share2 } from 'lucide-react';
+import ComparisonSlider from '@/components/learn/ComparisonSlider';
 
 // --- REAL DATA WITH CONTENT ---
 const videos = [
@@ -138,12 +139,26 @@ const LearnPage = () => {
             )}
           </TabsContent>
 
-          {/* INFOGRAPHICS TAB */}
-          <TabsContent value="infographics" className="mt-4">
+{/* INFOGRAPHICS TAB */}
+<TabsContent value="infographics" className="mt-4">
+            
+            {/* 1. Feature the Slider at the top (Full Width) */}
+            <div className="mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+               <ComparisonSlider />
+            </div>
+
+            {/* 2. Then show the grid of static cards */}
+            <h3 className="text-lg font-bold text-slate-700 mb-3 ml-1">More Visual Data</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {infographics.map((item) => (
                 <div key={item.id} onClick={() => setSelectedInfographic(item)}>
-                  <ContentCard title={item.title} category={item.category} readTime="View Data" image={item.image} isInfographic />
+                  <ContentCard 
+                    title={item.title} 
+                    category={item.category} 
+                    readTime="View Data" 
+                    image={item.image} 
+                    isInfographic 
+                  />
                 </div>
               ))}
             </div>
