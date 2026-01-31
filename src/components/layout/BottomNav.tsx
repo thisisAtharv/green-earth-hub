@@ -1,10 +1,11 @@
-import { Home, Leaf, BookOpen, Trophy, User, MessageCircle } from 'lucide-react';
+import { Home, Leaf, BookOpen, Trophy, User, MessageCircle, Map } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 const navItems = [
   { icon: Home, label: 'Home', path: '/dashboard' },
   { icon: Leaf, label: 'Track', path: '/track' },
+  { icon: Map, label: 'Map', path: '/map' },
   { icon: MessageCircle, label: 'Chat', path: '/chat' },
   { icon: BookOpen, label: 'Learn', path: '/learn' },
   { icon: Trophy, label: 'Leaders', path: '/leaderboard' },
